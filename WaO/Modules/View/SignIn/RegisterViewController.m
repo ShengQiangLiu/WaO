@@ -1,87 +1,84 @@
 //
-//  SignInViewController.m
+//  RegisterViewController.m
 //  WaO
 //
-//  Created by admin on 15/9/20.
+//  Created by Sniper on 15/9/20.
 //  Copyright © 2015年 ShengQiangLiu. All rights reserved.
 //
 
-#import "SignInViewController.h"
 #import "RegisterViewController.h"
-#import "SigninViewModel.h"
-#import "NSString+EmailAdditions.h"
 #import "SigninHandler.h"
+#import "NSString+EmailAdditions.h"
+#import "RegisterViewModel.h"
 
-@interface SignInViewController ()
-@property (nonatomic, strong) UIImageView *headImageView;
-@property (nonatomic, strong) UITextField *emailTextField;
+@interface RegisterViewController ()
+@property (nonatomic, strong) UITextField *usernameTextField;
 @property (nonatomic, strong) UITextField *passwordTextField;
-@property (nonatomic, strong) UIButton *logInButton;
+@property (nonatomic, strong) UITextField *emailTextField;
+@property (nonatomic, strong) UIButton *registerButton;
 
-@property (nonatomic, strong) SigninViewModel *viewModel;
+@property (nonatomic, strong) RegisterViewModel *viewModel;
 
 @end
 
-@implementation SignInViewController
+
+@implementation RegisterViewController
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.viewModel = [[SigninViewModel alloc] init];
+        self.viewModel = [[RegisterViewModel alloc] init];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = RGB(240, 240, 240);
-
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"注册" style:UIBarButtonItemStyleDone target:self action:@selector(registerBtnClick:)];
+    self.usernameTextField = [[UITextField alloc] init];
+    self.usernameTextField.backgroundColor = [UIColor whiteColor];
+    self.usernameTextField.layer.cornerRadius = 5;
+    self.usernameTextField.placeholder = NSLocalizedString(@"  username", nil);
+    self.usernameTextField.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.usernameTextField];
     
-    self.headImageView = [[UIImageView alloc] init];
-    self.headImageView.image = [UIImage imageNamed:@"haha.png"];
-    self.headImageView.contentMode = UIViewContentModeScaleAspectFill;
-    [self.view addSubview:self.headImageView];
     
     self.emailTextField = [[UITextField alloc] init];
     self.emailTextField.backgroundColor = [UIColor whiteColor];
-    //    UIImageView *imageView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
-    //    imageView1.image = [UIImage imageNamed:];
-    //    self.usernameTextField.leftView = imageView1;
     self.emailTextField.layer.cornerRadius = 5;
-    self.emailTextField.placeholder = @"  username";
+    self.emailTextField.placeholder = NSLocalizedString(@"  email ", nil);
+    self.emailTextField.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.emailTextField];
     
     self.passwordTextField = [[UITextField alloc] init];
     self.passwordTextField.backgroundColor = [UIColor whiteColor];
     self.passwordTextField.layer.cornerRadius = 5;
-    self.passwordTextField.placeholder = @"  password";
+    self.passwordTextField.placeholder = NSLocalizedString(@"  password", nil);
+    self.passwordTextField.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.passwordTextField];
     
-    self.logInButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.logInButton.backgroundColor = RGB(127, 127, 127);
-    self.logInButton.layer.cornerRadius = 5;
-    [self.logInButton setTitle:@"登录" forState:UIControlStateNormal];
-    [self.view addSubview:self.logInButton];
-    
-    [self viewLayout];
+    self.registerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.registerButton.backgroundColor = RGB(127, 127, 127);
+    self.registerButton.layer.cornerRadius = 5;
+    [self.registerButton setTitle:NSLocalizedString(@"注册", nil)  forState:UIControlStateNormal];
+    self.registerButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.registerButton];
+
+    [self subviewsLayout];
+
     [self bindWithViewModel];
-
+    
 }
 
-- (void)registerBtnClick:(id)sender {
-    [self.navigationController pushViewController:[RegisterViewController new] animated:YES];
-}
-
-- (void)viewLayout {
-    [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view).with.offset(VScale(100));
-        make.size.mas_equalTo(CGSizeMake(HScale(80), VScale(80)));
-        make.centerX.mas_equalTo(self.view.mas_centerX);
+- (void)subviewsLayout {
+    [self.usernameTextField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).with.offset(VScale(150));
+        make.left.equalTo(self.view.mas_left).with.offset(HScale(15));
+        make.right.equalTo(self.view.mas_right).with.offset(HScale(-15));
+        make.height.mas_equalTo(VScale(40));
     }];
     [self.emailTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headImageView.mas_bottom).with.offset(VScale(20));
+        make.top.equalTo(self.usernameTextField.mas_bottom).with.offset(VScale(20));
         make.left.equalTo(self.view.mas_left).with.offset(HScale(15));
         make.right.equalTo(self.view.mas_right).with.offset(HScale(-15));
         make.height.mas_equalTo(VScale(40));
@@ -92,40 +89,37 @@
         make.right.equalTo(self.view.mas_right).with.offset(HScale(-15));
         make.height.mas_equalTo(VScale(40));
     }];
-    [self.logInButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.registerButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.passwordTextField.mas_bottom).with.offset(VScale(20));
         make.left.equalTo(self.view.mas_left).with.offset(HScale(15));
         make.right.equalTo(self.view.mas_right).with.offset(HScale(-15));
         make.height.mas_equalTo(VScale(40));
     }];
+    
 }
 
-
 - (void)bindWithViewModel {
-    
-    // 这里监听，里面的信号才会启动
     RAC(self.viewModel, email) = self.emailTextField.rac_textSignal;
+    RAC(self.viewModel, username) = self.usernameTextField.rac_textSignal;
     RAC(self.viewModel, password) = self.passwordTextField.rac_textSignal;
-    self.logInButton.rac_command = self.viewModel.loginCommand;
-    [RACObserve(self.viewModel, statusMessage) subscribeNext:^(NSString *value) {
-        if (value.isExist) {
-            if ([value isEqualToString:@"START"]) {
-                [SVProgressHUD showWithStatus:@"Logging in..." maskType:SVProgressHUDMaskTypeClear];
-            } else if ([value isEqualToString:@"COMPLETED"]){
+    self.registerButton.rac_command = self.viewModel.registerCommand;
+    [RACObserve(self.viewModel, signinState) subscribeNext:^(NSString *state) {
+        if (state.isExist) {
+            if ([state isEqualToString:@"START"]) {
+                [SVProgressHUD showWithStatus:@"注册中...."  maskType:SVProgressHUDMaskTypeClear];
+            } else if ([state isEqualToString:@"COMPLETED"]) {
                 [SVProgressHUD dismiss];
                 [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"SUCCESS" description:@"注册成功" type:TWMessageBarMessageTypeSuccess statusBarStyle:UIStatusBarStyleLightContent callback:NULL];
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [[SigninHandler sharedInstance] setupHomeViewController];
                 });
-            } else  {
+            } else {
                 [SVProgressHUD dismiss];
-                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"ERROR" description:[NSString stringWithFormat:@"%@", value] type:TWMessageBarMessageTypeError statusBarStyle:UIStatusBarStyleLightContent callback:NULL];
+                [[TWMessageBarManager sharedInstance] showMessageWithTitle:@"ERROR" description:[NSString stringWithFormat:@"%@", state] type:TWMessageBarMessageTypeError statusBarStyle:UIStatusBarStyleLightContent callback:NULL];
             }
         }
     }];
-    
 }
-
 
 
 - (void)didReceiveMemoryWarning {

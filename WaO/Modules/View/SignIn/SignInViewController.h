@@ -6,8 +6,8 @@
 //  Copyright © 2015年 ShengQiangLiu. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface SignInViewController : ViewController
+@interface SignInViewController : UIViewController
 
 @end

@@ -6,14 +6,14 @@
 //  Copyright (c) 2015年 ShengQiangLiu. All rights reserved.
 //
 
-#import "SiginHandler.h"
+#import "SigninHandler.h"
 #import "SignInViewController.h"
 
 
-@implementation SiginHandler
+@implementation SigninHandler
 
 + (instancetype)sharedInstance {
-    static SiginHandler *handler = nil;
+    static SigninHandler *handler = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         handler = [[[self class] alloc] init];

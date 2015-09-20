@@ -24,7 +24,6 @@
 #import <AFNetworking/AFNetworking.h>
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <Parse/Parse.h>
-#import <MBProgressHUD/MBProgressHUD.h>
 #import <TWMessageBarManager/TWMessageBarManager.h>
 #import <Masonry/Masonry.h>
 

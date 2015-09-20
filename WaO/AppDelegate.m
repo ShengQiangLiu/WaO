@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "SiginHandler.h"
+#import "SigninHandler.h"
 
 @interface AppDelegate ()
 
@@ -39,7 +39,7 @@
 //    if ([[UserInfoHandler sharedInstance] accountIsExist]) {
 //        [[SiginHandler sharedInstance] setupHomeViewController];
 //    } else {
-        [[SiginHandler sharedInstance] setupLoginViewController];
+        [[SigninHandler sharedInstance] setupLoginViewController];
 //    }
 }
 

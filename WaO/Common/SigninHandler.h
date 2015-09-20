@@ -8,10 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SiginHandler : NSObject
+@interface SigninHandler : NSObject
 
 + (instancetype)sharedInstance;
 - (void)setupLoginViewController;
-//- (void)setupHomeViewController;
+- (void)setupHomeViewController;
 
 @end

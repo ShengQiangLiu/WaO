@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		69A4BF02CD6481B03807A990 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1884C840B67D35D9E7DC9CB3 /* libPods.a */; };
+		767182BB1BAEC75F0019EA23 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182BA1BAEC75F0019EA23 /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		767182D01BAEE8790019EA23 /* SigninViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182CD1BAEE8790019EA23 /* SigninViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		767182D11BAEE8790019EA23 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182CF1BAEE8790019EA23 /* RegisterViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		767182D91BAEE9360019EA23 /* PFRACCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182D41BAEE9360019EA23 /* PFRACCallbacks.m */; settings = {ASSET_TAGS = (); }; };
+		767182DA1BAEE9360019EA23 /* PFRACErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182D61BAEE9360019EA23 /* PFRACErrors.m */; settings = {ASSET_TAGS = (); }; };
+		767182DB1BAEE9360019EA23 /* PFUser+RACExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182D81BAEE9360019EA23 /* PFUser+RACExtensions.m */; settings = {ASSET_TAGS = (); }; };
+		767182DE1BAEE9670019EA23 /* NSString+EmailAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182DD1BAEE9670019EA23 /* NSString+EmailAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		767182F81BAEF2B70019EA23 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767182F71BAEF2B70019EA23 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B0A61BAE9EF8008CB94F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B0A51BAE9EF8008CB94F /* main.m */; };
 		84B0B0A91BAE9EF8008CB94F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B0A81BAE9EF8008CB94F /* AppDelegate.m */; };
 		84B0B0AC1BAE9EF8008CB94F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B0AB1BAE9EF8008CB94F /* ViewController.m */; };
@@ -49,7 +57,7 @@
 		84B0B1B91BAEA728008CB94F /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1971BAEA728008CB94F /* UIColor+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1BA1BAEA728008CB94F /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1991BAEA728008CB94F /* UIViewExt.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1BF1BAEAF06008CB94F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
-		84B0B1C21BAEAFAB008CB94F /* SiginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */; settings = {ASSET_TAGS = (); }; };
+		84B0B1C21BAEAFAB008CB94F /* SigninHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1C11BAEAFAB008CB94F /* SigninHandler.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1C51BAEAFDF008CB94F /* UserInfoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1C71BAEB529008CB94F /* haha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B0B1C61BAEB529008CB94F /* haha.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -57,6 +65,25 @@
 /* Begin PBXFileReference section */
 		1884C840B67D35D9E7DC9CB3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		286308D24835AF4DA1353345 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		767182B91BAEC75F0019EA23 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		767182BA1BAEC75F0019EA23 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		767182BC1BAECA810019EA23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		767182BD1BAECA810019EA23 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		767182BF1BAECAAD0019EA23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		767182CC1BAEE8790019EA23 /* SigninViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninViewModel.h; sourceTree = "<group>"; };
+		767182CD1BAEE8790019EA23 /* SigninViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninViewModel.m; sourceTree = "<group>"; };
+		767182CE1BAEE8790019EA23 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		767182CF1BAEE8790019EA23 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		767182D31BAEE9360019EA23 /* PFRACCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFRACCallbacks.h; sourceTree = "<group>"; };
+		767182D41BAEE9360019EA23 /* PFRACCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFRACCallbacks.m; sourceTree = "<group>"; };
+		767182D51BAEE9360019EA23 /* PFRACErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFRACErrors.h; sourceTree = "<group>"; };
+		767182D61BAEE9360019EA23 /* PFRACErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFRACErrors.m; sourceTree = "<group>"; };
+		767182D71BAEE9360019EA23 /* PFUser+RACExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+RACExtensions.h"; sourceTree = "<group>"; };
+		767182D81BAEE9360019EA23 /* PFUser+RACExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+RACExtensions.m"; sourceTree = "<group>"; };
+		767182DC1BAEE9670019EA23 /* NSString+EmailAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailAdditions.h"; sourceTree = "<group>"; };
+		767182DD1BAEE9670019EA23 /* NSString+EmailAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmailAdditions.m"; sourceTree = "<group>"; };
+		767182F61BAEF2B70019EA23 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		767182F71BAEF2B70019EA23 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		84B0B0A11BAE9EF8008CB94F /* WaO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B0B0A51BAE9EF8008CB94F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84B0B0A71BAE9EF8008CB94F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,8 +165,8 @@
 		84B0B1991BAEA728008CB94F /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		84B0B1BD1BAEAF06008CB94F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
-		84B0B1C01BAEAFAB008CB94F /* SiginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiginHandler.h; sourceTree = "<group>"; };
-		84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiginHandler.m; sourceTree = "<group>"; };
+		84B0B1C01BAEAFAB008CB94F /* SigninHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigninHandler.h; sourceTree = "<group>"; };
+		84B0B1C11BAEAFAB008CB94F /* SigninHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigninHandler.m; sourceTree = "<group>"; };
 		84B0B1C31BAEAFDF008CB94F /* UserInfoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHandler.h; sourceTree = "<group>"; };
 		84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHandler.m; sourceTree = "<group>"; };
 		84B0B1C61BAEB529008CB94F /* haha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haha.png; sourceTree = "<group>"; };
@@ -165,6 +192,19 @@
 				286308D24835AF4DA1353345 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		767182D21BAEE9360019EA23 /* Parse-RACExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				767182D31BAEE9360019EA23 /* PFRACCallbacks.h */,
+				767182D41BAEE9360019EA23 /* PFRACCallbacks.m */,
+				767182D51BAEE9360019EA23 /* PFRACErrors.h */,
+				767182D61BAEE9360019EA23 /* PFRACErrors.m */,
+				767182D71BAEE9360019EA23 /* PFUser+RACExtensions.h */,
+				767182D81BAEE9360019EA23 /* PFUser+RACExtensions.m */,
+			);
+			path = "Parse-RACExtensions";
 			sourceTree = "<group>";
 		};
 		84B0B0981BAE9EF8008CB94F = {
@@ -238,8 +278,9 @@
 		84B0B0BE1BAEA1BE008CB94F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				84B0B1C01BAEAFAB008CB94F /* SiginHandler.h */,
-				84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */,
+				767182D21BAEE9360019EA23 /* Parse-RACExtensions */,
+				84B0B1C01BAEAFAB008CB94F /* SigninHandler.h */,
+				84B0B1C11BAEAFAB008CB94F /* SigninHandler.m */,
 				84B0B1C31BAEAFDF008CB94F /* UserInfoHandler.h */,
 				84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */,
 			);
@@ -249,6 +290,10 @@
 		84B0B0BF1BAEA22E008CB94F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				767182CC1BAEE8790019EA23 /* SigninViewModel.h */,
+				767182CD1BAEE8790019EA23 /* SigninViewModel.m */,
+				767182CE1BAEE8790019EA23 /* RegisterViewModel.h */,
+				767182CF1BAEE8790019EA23 /* RegisterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -257,6 +302,8 @@
 			isa = PBXGroup;
 			children = (
 				84B0B1BC1BAEA95D008CB94F /* SignIn */,
+				767182F61BAEF2B70019EA23 /* HomeViewController.h */,
+				767182F71BAEF2B70019EA23 /* HomeViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -350,6 +397,8 @@
 		84B0B1561BAEA728008CB94F /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				767182DC1BAEE9670019EA23 /* NSString+EmailAdditions.h */,
+				767182DD1BAEE9670019EA23 /* NSString+EmailAdditions.m */,
 				84B0B1571BAEA728008CB94F /* NSString+Extend.h */,
 				84B0B1581BAEA728008CB94F /* NSString+Extend.m */,
 				84B0B1591BAEA728008CB94F /* NSString+Password.h */,
@@ -521,6 +570,8 @@
 			children = (
 				84B0B1BD1BAEAF06008CB94F /* SignInViewController.h */,
 				84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */,
+				767182B91BAEC75F0019EA23 /* RegisterViewController.h */,
+				767182BA1BAEC75F0019EA23 /* RegisterViewController.m */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -646,16 +697,20 @@
 				84B0B1B31BAEA728008CB94F /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				84B0B1A11BAEA728008CB94F /* NSString+Password.m in Sources */,
 				84B0B0AC1BAE9EF8008CB94F /* ViewController.m in Sources */,
-				84B0B1C21BAEAFAB008CB94F /* SiginHandler.m in Sources */,
+				84B0B1C21BAEAFAB008CB94F /* SigninHandler.m in Sources */,
 				84B0B1B41BAEA728008CB94F /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				84B0B1AA1BAEA728008CB94F /* UIImage+Extend.m in Sources */,
 				84B0B1BA1BAEA728008CB94F /* UIViewExt.m in Sources */,
+				767182F81BAEF2B70019EA23 /* HomeViewController.m in Sources */,
+				767182D91BAEE9360019EA23 /* PFRACCallbacks.m in Sources */,
 				84B0B1B91BAEA728008CB94F /* UIColor+Extension.m in Sources */,
+				767182DB1BAEE9360019EA23 /* PFUser+RACExtensions.m in Sources */,
 				84B0B1A61BAEA728008CB94F /* UIDevice+Extend.m in Sources */,
 				84B0B1A01BAEA728008CB94F /* NSString+Extend.m in Sources */,
 				84B0B1A91BAEA728008CB94F /* UIImage+Cut.m in Sources */,
 				84B0B1AD1BAEA728008CB94F /* UITableViewCell+Extend.m in Sources */,
 				84B0B1AE1BAEA728008CB94F /* UIView+Extend.m in Sources */,
+				767182DE1BAEE9670019EA23 /* NSString+EmailAdditions.m in Sources */,
 				84B0B1A71BAEA728008CB94F /* UIFont+Extend.m in Sources */,
 				84B0B0A91BAE9EF8008CB94F /* AppDelegate.m in Sources */,
 				84B0B1BF1BAEAF06008CB94F /* SignInViewController.m in Sources */,
@@ -663,6 +718,7 @@
 				84B0B1C51BAEAFDF008CB94F /* UserInfoHandler.m in Sources */,
 				84B0B19E1BAEA728008CB94F /* NSDate+Extend.m in Sources */,
 				84B0B1421BAEA611008CB94F /* Constant.m in Sources */,
+				767182BB1BAEC75F0019EA23 /* RegisterViewController.m in Sources */,
 				84B0B19C1BAEA728008CB94F /* CALayerAnimConst.m in Sources */,
 				84B0B1B21BAEA728008CB94F /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				84B0B19F1BAEA728008CB94F /* NSObject+Extend.m in Sources */,
@@ -670,7 +726,10 @@
 				84B0B1B01BAEA728008CB94F /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				84B0B1AC1BAEA728008CB94F /* UIImage+Water.m in Sources */,
 				84B0B1A41BAEA728008CB94F /* CheckTFModel.m in Sources */,
+				767182D01BAEE8790019EA23 /* SigninViewModel.m in Sources */,
 				84B0B19A1BAEA728008CB94F /* CALayer+Anim.m in Sources */,
+				767182DA1BAEE9360019EA23 /* PFRACErrors.m in Sources */,
+				767182D11BAEE8790019EA23 /* RegisterViewModel.m in Sources */,
 				84B0B19B1BAEA728008CB94F /* CALayer+Transition.m in Sources */,
 				84B0B19D1BAEA728008CB94F /* NSArray+Extend.m in Sources */,
 				84B0B1B71BAEA728008CB94F /* SlideNavigationController.m in Sources */,
@@ -689,6 +748,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				84B0B0AE1BAE9EF8008CB94F /* Base */,
+				767182BC1BAECA810019EA23 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -697,6 +757,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				84B0B0B31BAE9EF8008CB94F /* Base */,
+				767182BD1BAECA810019EA23 /* zh-Hans */,
+				767182BF1BAECAAD0019EA23 /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -792,6 +854,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WaO/PrefixHeader.pch;
 				INFOPLIST_FILE = WaO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengqiangliu.WaO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -806,6 +869,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = WaO/PrefixHeader.pch;
 				INFOPLIST_FILE = WaO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shengqiangliu.WaO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
