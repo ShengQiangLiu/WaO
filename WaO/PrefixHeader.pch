@@ -26,10 +26,11 @@
 #import <Parse/Parse.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <TWMessageBarManager/TWMessageBarManager.h>
-
+#import <Masonry/Masonry.h>
 
 #import "Constant.h"
 #import "Macro.h"
+#import "UserInfoHandler.h"
 
 
 #endif

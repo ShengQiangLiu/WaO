@@ -48,6 +48,10 @@
 		84B0B1B81BAEA728008CB94F /* TKRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1951BAEA728008CB94F /* TKRoundedView.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1B91BAEA728008CB94F /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1971BAEA728008CB94F /* UIColor+Extension.m */; settings = {ASSET_TAGS = (); }; };
 		84B0B1BA1BAEA728008CB94F /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1991BAEA728008CB94F /* UIViewExt.m */; settings = {ASSET_TAGS = (); }; };
+		84B0B1BF1BAEAF06008CB94F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */; settings = {ASSET_TAGS = (); }; };
+		84B0B1C21BAEAFAB008CB94F /* SiginHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */; settings = {ASSET_TAGS = (); }; };
+		84B0B1C51BAEAFDF008CB94F /* UserInfoHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */; settings = {ASSET_TAGS = (); }; };
+		84B0B1C71BAEB529008CB94F /* haha.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B0B1C61BAEB529008CB94F /* haha.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +136,13 @@
 		84B0B1971BAEA728008CB94F /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		84B0B1981BAEA728008CB94F /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
 		84B0B1991BAEA728008CB94F /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		84B0B1BD1BAEAF06008CB94F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		84B0B1C01BAEAFAB008CB94F /* SiginHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiginHandler.h; sourceTree = "<group>"; };
+		84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiginHandler.m; sourceTree = "<group>"; };
+		84B0B1C31BAEAFDF008CB94F /* UserInfoHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoHandler.h; sourceTree = "<group>"; };
+		84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoHandler.m; sourceTree = "<group>"; };
+		84B0B1C61BAEB529008CB94F /* haha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = haha.png; sourceTree = "<group>"; };
 		FCD2ABE8EBAE519EFEA62D5E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -227,6 +238,10 @@
 		84B0B0BE1BAEA1BE008CB94F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84B0B1C01BAEAFAB008CB94F /* SiginHandler.h */,
+				84B0B1C11BAEAFAB008CB94F /* SiginHandler.m */,
+				84B0B1C31BAEAFDF008CB94F /* UserInfoHandler.h */,
+				84B0B1C41BAEAFDF008CB94F /* UserInfoHandler.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -241,6 +256,7 @@
 		84B0B0C01BAEA22E008CB94F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84B0B1BC1BAEA95D008CB94F /* SignIn */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,8 +511,18 @@
 		84B0B1BB1BAEA74E008CB94F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				84B0B1C61BAEB529008CB94F /* haha.png */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		84B0B1BC1BAEA95D008CB94F /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				84B0B1BD1BAEAF06008CB94F /* SignInViewController.h */,
+				84B0B1BE1BAEAF06008CB94F /* SignInViewController.m */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		CFA59FDE35E9A6FD5DAFC921 /* Frameworks */ = {
@@ -571,6 +597,7 @@
 				84B0B0B11BAE9EF8008CB94F /* Assets.xcassets in Resources */,
 				84B0B1B61BAEA728008CB94F /* menu-button@2x.png in Resources */,
 				84B0B0AF1BAE9EF8008CB94F /* Main.storyboard in Resources */,
+				84B0B1C71BAEB529008CB94F /* haha.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +646,7 @@
 				84B0B1B31BAEA728008CB94F /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				84B0B1A11BAEA728008CB94F /* NSString+Password.m in Sources */,
 				84B0B0AC1BAE9EF8008CB94F /* ViewController.m in Sources */,
+				84B0B1C21BAEAFAB008CB94F /* SiginHandler.m in Sources */,
 				84B0B1B41BAEA728008CB94F /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				84B0B1AA1BAEA728008CB94F /* UIImage+Extend.m in Sources */,
 				84B0B1BA1BAEA728008CB94F /* UIViewExt.m in Sources */,
@@ -630,7 +658,9 @@
 				84B0B1AE1BAEA728008CB94F /* UIView+Extend.m in Sources */,
 				84B0B1A71BAEA728008CB94F /* UIFont+Extend.m in Sources */,
 				84B0B0A91BAE9EF8008CB94F /* AppDelegate.m in Sources */,
+				84B0B1BF1BAEAF06008CB94F /* SignInViewController.m in Sources */,
 				84B0B1A51BAEA728008CB94F /* UIViewController+Extend.m in Sources */,
+				84B0B1C51BAEAFDF008CB94F /* UserInfoHandler.m in Sources */,
 				84B0B19E1BAEA728008CB94F /* NSDate+Extend.m in Sources */,
 				84B0B1421BAEA611008CB94F /* Constant.m in Sources */,
 				84B0B19C1BAEA728008CB94F /* CALayerAnimConst.m in Sources */,

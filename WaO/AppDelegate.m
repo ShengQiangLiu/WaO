@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SiginHandler.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // 初始化 Parse
+    [Parse setApplicationId:ParseAppID clientKey:ParseAppKey];
+    
+    [self configureKeyboardManager];
+    
+    [self createInitialViewController];
+    
     return YES;
 }
+
+- (void)configureKeyboardManager {
+    IQKeyboardManager.sharedManager.enableAutoToolbar = NO;
+    IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = YES;
+}
+
+- (void)createInitialViewController {
+    // 判断是否登录
+//    if ([[UserInfoHandler sharedInstance] accountIsExist]) {
+//        [[SiginHandler sharedInstance] setupHomeViewController];
+//    } else {
+        [[SiginHandler sharedInstance] setupLoginViewController];
+//    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
